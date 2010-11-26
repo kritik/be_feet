@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Trainig:</b>
+  <%= @value.trainig_id %>
+</p>
+
+<p>
+  <b>Value name:</b>
+  <%= @value.value_name %>
+</p>
+
+<p>
+  <b>Class:</b>
+  <%= @value.class %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @value.type %>
+</p>
+
+
+<%= link_to 'Edit', edit_value_path(@value) %> |
+<%= link_to 'Back', values_path %>

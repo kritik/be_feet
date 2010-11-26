@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @training.user_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @training.name %>
+</p>
+
+<p>
+  <b>Info:</b>
+  <%= @training.info %>
+</p>
+
+<p>
+  <b>Week days:</b>
+  <%= @training.week_days %>
+</p>
+
+<p>
+  <b>Times per day:</b>
+  <%= @training.times_per_day %>
+</p>
+
+<p>
+  <b>Result date:</b>
+  <%= @training.result_date %>
+</p>
+
+<p>
+  <b>Result:</b>
+  <%= @training.result %>
+</p>
+
+
+<%= link_to 'Edit', edit_training_path(@training) %> |
+<%= link_to 'Back', trainings_path %>
