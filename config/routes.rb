@@ -3,7 +3,7 @@ BeFeet::Application.routes.draw do
     resources :logs
     resources :values
   end
-  root :to => "trainings"
+  root :to => "index#trainings"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

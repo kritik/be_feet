@@ -1,4 +1,4 @@
-1290754703
+1290785356
 Application	/home/vladimir/rails/be_feet/config/application.rb	  class Application 
 ApplicationController	/home/vladimir/rails/be_feet/app/controllers/application_controller.rb	class ApplicationController 
 ApplicationHelper	/home/vladimir/rails/be_feet/app/helpers/application_helper.rb	module ApplicationHelper
