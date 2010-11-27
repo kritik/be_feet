@@ -1,45 +1,7 @@
-<%= form_for(@training) do |f| %>
-  <% if @training.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@training.errors.count, "error") %> prohibited this training from being saved:</h2>
-
-      <ul>
-      <% @training.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.text_field :user_id %>
-  </div>
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :info %><br />
-    <%= f.text_area :info %>
-  </div>
-  <div class="field">
-    <%= f.label :week_days %><br />
-    <%= f.text_field :week_days %>
-  </div>
-  <div class="field">
-    <%= f.label :times_per_day %><br />
-    <%= f.text_field :times_per_day %>
-  </div>
-  <div class="field">
-    <%= f.label :result_date %><br />
-    <%= f.date_select :result_date %>
-  </div>
-  <div class="field">
-    <%= f.label :result %><br />
-    <%= f.text_field :result %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= semantic_form_for @training do |form| %>
+  <%= form.inputs %>
+  <%= form.semantic_fields_for :exercises do |exercises| %>
+    <%= exercises.inputs :name, :amount, :name=>"Exersise %i" %>
+  <%end%>
+  <%= form.buttons %>
 <% end %>

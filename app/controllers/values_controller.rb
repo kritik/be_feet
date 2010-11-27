@@ -25,6 +25,7 @@ class ValuesController < ApplicationController
   # GET /values/new.xml
   def new
     @value = Value.new
+    p @value
 
     respond_to do |format|
       format.html # new.html.erb

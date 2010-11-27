@@ -1,10 +1,10 @@
-<%= form_for(Value.new) do |f| %>
-  <% if @value.errors.any? %>
+<%= form_for(@exercise) do |f| %>
+  <% if @exercise.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@value.errors.count, "error") %> prohibited this value from being saved:</h2>
+      <h2><%= pluralize(@exercise.errors.count, "error") %> prohibited this exercise from being saved:</h2>
 
       <ul>
-      <% @value.errors.full_messages.each do |msg| %>
+      <% @exercise.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
@@ -12,16 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :trainig_id %><br />
-    <%= f.text_field :trainig_id %>
+    <%= f.label :training_id %><br />
+    <%= f.text_field :training_id %>
   </div>
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :class %><br />
-    <%= f.text_field :class %>
   </div>
   <div class="field">
     <%= f.label :type %><br />

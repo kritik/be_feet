@@ -25,6 +25,7 @@ class TrainingsController < ApplicationController
   # GET /trainings/new.xml
   def new
     @training = Training.new
+    load_exercises
 
     respond_to do |format|
       format.html # new.html.erb
@@ -41,6 +42,7 @@ class TrainingsController < ApplicationController
   # POST /trainings.xml
   def create
     @training = Training.new(params[:training])
+    # load_exercises
 
     respond_to do |format|
       if @training.save
@@ -79,5 +81,9 @@ class TrainingsController < ApplicationController
       format.html { redirect_to(trainings_url) }
       format.xml  { head :ok }
     end
+  end
+  private
+  def load_exercises
+    3.times{ @training.exercises.build }
   end
 end

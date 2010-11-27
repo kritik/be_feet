@@ -1,16 +1,16 @@
-class CreateValues < ActiveRecord::Migration
+class CreateExercises < ActiveRecord::Migration
   def self.up
-    create_table :values do |t|
+    create_table :exercises do |t|
       t.integer :training_id
       t.string :name
-      t.string :class
       t.string :type
+      t.string :amount
 
       t.timestamps
     end
   end
 
   def self.down
-    drop_table :values
+    drop_table :exercises
   end
 end
