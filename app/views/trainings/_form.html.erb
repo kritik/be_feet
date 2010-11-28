@@ -1,4 +1,6 @@
-<%= form_for @training, :html => {:class => "formtastic training"} do |f| %>
+<fieldset>
+<legend><%= @training.class %></legend>
+<%= form_for @training, :html => {} do |f| %>
   <% if @training.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@training.errors.count, "error") %> prohibited this log from being saved:</h2>
@@ -35,19 +37,11 @@
     <%= f.text_field :result %>
   </div>
   <fieldset>
+    <legend>Exercises:</legend>
     <%= f.fields_for :exercises do |builder| %>
-      <%#= render "_exercise_fields", :f => builder %>
+      <%= render "exercise_fields", :f => builder %>
     <% end %>
+    <p><%= link_to_add_fields "Add Answer", f, :exercises %></p>
   </fieldset>
 <% end %>
-<hr />
-<%= semantic_form_for @training do |form| %>
-  <%= form.inputs %>
-  <%= form.semantic_fields_for :exercises do |exercises| %>
-    <%= exercises.inputs :name, :amount, :name=>"Exersise %i" %>
-    <%= exercises.inputs do %>
-      <%= exercises.label :_destroy, "Remove" %>  <%= exercises.check_box :_destroy %>
-    <% end %>
-  <%end%>
-  <%= form.buttons %>
-<% end %>
+</fieldset>

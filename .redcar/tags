@@ -1,4 +1,4 @@
-1290961336
+1290973195
 Application	/home/kritik/rails/be_feet/config/application.rb	  class Application 
 ApplicationController	/home/kritik/rails/be_feet/app/controllers/application_controller.rb	class ApplicationController 
 ApplicationHelper	/home/kritik/rails/be_feet/app/helpers/application_helper.rb	module ApplicationHelper
@@ -53,6 +53,8 @@ index	/home/kritik/rails/be_feet/app/controllers/exercises_controller.rb	  def i
 index	/home/kritik/rails/be_feet/app/controllers/logs_controller.rb	  def index
 index	/home/kritik/rails/be_feet/app/controllers/trainings_controller.rb	  def index
 index	/home/kritik/rails/be_feet/app/controllers/values_controller.rb	  def index
+link_to_add_fields	/home/kritik/rails/be_feet/app/helpers/application_helper.rb	  def link_to_add_fields
+link_to_remove_fields	/home/kritik/rails/be_feet/app/helpers/application_helper.rb	  def link_to_remove_fields
 load_exercises	/home/kritik/rails/be_feet/app/controllers/trainings_controller.rb	  def load_exercises
 new	/home/kritik/rails/be_feet/app/controllers/exercises_controller.rb	  def new
 new	/home/kritik/rails/be_feet/app/controllers/logs_controller.rb	  def new
