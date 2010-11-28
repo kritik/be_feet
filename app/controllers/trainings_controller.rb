@@ -82,8 +82,10 @@ class TrainingsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  
   private
   def load_exercises
-    3.times{ @training.exercises.build }
+    3.times{ @training.exercises.build } unless @training.exercises.size>0
   end
 end
