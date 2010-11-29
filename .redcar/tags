@@ -1,4 +1,4 @@
-1290973195
+1291062522
 Application	/home/kritik/rails/be_feet/config/application.rb	  class Application 
 ApplicationController	/home/kritik/rails/be_feet/app/controllers/application_controller.rb	class ApplicationController 
 ApplicationHelper	/home/kritik/rails/be_feet/app/helpers/application_helper.rb	module ApplicationHelper
@@ -65,6 +65,7 @@ show	/home/kritik/rails/be_feet/app/controllers/logs_controller.rb	  def show
 show	/home/kritik/rails/be_feet/app/controllers/trainings_controller.rb	  def show
 show	/home/kritik/rails/be_feet/app/controllers/values_controller.rb	  def show
 test_homepage	/home/kritik/rails/be_feet/test/performance/browsing_test.rb	  def test_homepage
+training_name	/home/kritik/rails/be_feet/app/models/log.rb	  def training_name
 up	/home/kritik/rails/be_feet/db/migrate/20101125073056_create_trainings.rb	  def self.up
 up	/home/kritik/rails/be_feet/db/migrate/20101125110301_create_values.rb	  def self.up
 up	/home/kritik/rails/be_feet/db/migrate/20101125110820_create_logs.rb	  def self.up

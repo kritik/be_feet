@@ -13,9 +13,9 @@
 
 <% @logs.each do |log| %>
   <tr>
-    <td><%= log.training_id %></td>
+    <td><%= log.training_name %></td>
     <td><%= log.user_id %></td>
-    <td><%= log.value_id %></td>
+    <td><%= log.value %></td>
     <td><%= log.time %></td>
     <td><%= link_to 'Show', log %></td>
     <td><%= link_to 'Edit', edit_log_path(log) %></td>

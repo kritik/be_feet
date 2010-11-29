@@ -3,7 +3,7 @@ class CreateLogs < ActiveRecord::Migration
     create_table :logs do |t|
       t.integer :training_id
       t.integer :user_id
-      t.integer :value_id
+      t.float :value
       t.timestamp :time
 
       t.timestamps

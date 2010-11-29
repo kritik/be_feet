@@ -1,3 +1,4 @@
+<div class="float_left">
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -34,7 +35,20 @@
   <b>Result:</b>
   <%= @training.result %>
 </p>
-
-
+<hr />
+<ul>
+  <% @training.exercises.each do |exercise| %>
+    <li>Do:<%= exercise.name %> <%= exercise.amount %> times</li>
+  <% end %>
+</ul>
 <%= link_to 'Edit', edit_training_path(@training) %> |
 <%= link_to 'Back', trainings_path %>
+</div>
+
+
+<div class="float_left">
+  <fieldset>
+    <legend>Add log to training</legend>
+    <%= render "logs/form"%>
+  </fieldset>
+</div>

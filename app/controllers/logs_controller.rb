@@ -44,11 +44,12 @@ class LogsController < ApplicationController
 
     respond_to do |format|
       if @log.save
-        format.html { redirect_to(@log, :notice => 'Log was successfully created.') }
+        format.html { redirect_to(@log.training, :notice => 'Log was successfully created.') }
         format.xml  { render :xml => @log, :status => :created, :location => @log }
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @log.errors, :status => :unprocessable_entity }
+        format.js   { render :json=>@log }
       end
     end
   end

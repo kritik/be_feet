@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(:version => 20101127161208) do
   create_table "exercises", :force => true do |t|
     t.integer  "training_id"
     t.string   "name"
-    t.string   "type"
+    t.string   "type_id"
     t.string   "amount"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(:version => 20101127161208) do
   create_table "logs", :force => true do |t|
     t.integer  "training_id"
     t.integer  "user_id"
-    t.integer  "value_id"
+    t.float    "value"
     t.datetime "time"
     t.datetime "created_at"
     t.datetime "updated_at"

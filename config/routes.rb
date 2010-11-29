@@ -1,7 +1,8 @@
 BeFeet::Application.routes.draw do
+  resources :exercises, :logs
+  
   resources :trainings do
-    resources :logs
-    resources :exercises
+    resources :logs, :exercises
   end
   root :to => "trainings#index"
 

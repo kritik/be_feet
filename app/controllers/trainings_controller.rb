@@ -14,6 +14,9 @@ class TrainingsController < ApplicationController
   # GET /trainings/1.xml
   def show
     @training = Training.find(params[:id])
+    p "=============================="
+    p params
+    @log ||= Log.new(:training_id => @training.id)
 
     respond_to do |format|
       format.html # show.html.erb
@@ -42,7 +45,6 @@ class TrainingsController < ApplicationController
   # POST /trainings.xml
   def create
     @training = Training.new(params[:training])
-    # load_exercises
 
     respond_to do |format|
       if @training.save

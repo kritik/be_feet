@@ -7,7 +7,8 @@ gem 'rails', '3.0.3'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem "jquery-rails"
-gem 'formtastic'
+#gem 'formtastic'
+gem 'client_side_validations'
 
 
 # Use unicorn as the web server
