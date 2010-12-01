@@ -31,7 +31,7 @@ module BeFeet
     # config.i18n.default_locale = :de
 
     # JavaScript files you want as :defaults (application.js is always included).
-    config.action_view.javascript_expansions[:defaults] = %w(jquery.min jquery-ui.min rails jquery-validation client_side_validations application)
+    config.action_view.javascript_expansions[:defaults] = %w(jquery.min jquery-ui.min rails jquery-validation client_side_validations jquery.flot.min)
 
 
     # Configure the default encoding used in templates for Ruby 1.9.
