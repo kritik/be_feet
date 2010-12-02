@@ -52,3 +52,14 @@
     <%= render "logs/form"%>
   </fieldset>
 </div>
+<div class="clear_both"></div>
+
+
+<div class="content">
+  <div id="placeholder" class="" style="width:600px;height:300px;" data-coordinates="<%= flot_logs(@training) %>"></div>
+  <div class="">
+  <%= render :partial => "logs/log", :collection=> @training.logs%>
+  </div>
+  
+</div>
+

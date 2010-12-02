@@ -1,4 +1,4 @@
-1291202351
+1291299947
 Application	/home/vladimir/rails/be_feet/config/application.rb	  class Application 
 ApplicationHelper	/home/vladimir/rails/be_feet/app/helpers/application_helper.rb	module ApplicationHelper
 BeFeet	/home/vladimir/rails/be_feet/config/application.rb	module BeFeet
@@ -15,6 +15,7 @@ Log	/home/vladimir/rails/be_feet/app/models/log.rb	class Log
 LogsController	/home/vladimir/rails/be_feet/app/controllers/logs_controller.rb	class LogsController 
 Training	/home/vladimir/rails/be_feet/app/models/training.rb	class Training 
 TrainingsController	/home/vladimir/rails/be_feet/app/controllers/trainings_controller.rb	class TrainingsController 
+TrainingsHelper	/home/vladimir/rails/be_feet/app/helpers/trainings_helper.rb	module TrainingsHelper
 ValuesController	/home/vladimir/rails/be_feet/app/controllers/values_controller.rb	class ValuesController 
 create	/home/vladimir/rails/be_feet/app/controllers/exercises_controller.rb	  def create
 create	/home/vladimir/rails/be_feet/app/controllers/logs_controller.rb	  def create
@@ -31,6 +32,7 @@ edit	/home/vladimir/rails/be_feet/app/controllers/exercises_controller.rb	  def 
 edit	/home/vladimir/rails/be_feet/app/controllers/logs_controller.rb	  def edit
 edit	/home/vladimir/rails/be_feet/app/controllers/trainings_controller.rb	  def edit
 edit	/home/vladimir/rails/be_feet/app/controllers/values_controller.rb	  def edit
+flot_logs	/home/vladimir/rails/be_feet/app/helpers/trainings_helper.rb	  def flot_logs
 index	/home/vladimir/rails/be_feet/app/controllers/exercises_controller.rb	  def index
 index	/home/vladimir/rails/be_feet/app/controllers/logs_controller.rb	  def index
 index	/home/vladimir/rails/be_feet/app/controllers/trainings_controller.rb	  def index
