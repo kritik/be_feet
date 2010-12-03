@@ -80,6 +80,7 @@ class LogsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(:back) }
       format.xml  { head :ok }
+      format.js   { render :action=> "delete" }
     end
   end
 end

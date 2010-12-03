@@ -1,4 +1,4 @@
-1291299947
+1291375160
 Application	/home/vladimir/rails/be_feet/config/application.rb	  class Application 
 ApplicationHelper	/home/vladimir/rails/be_feet/app/helpers/application_helper.rb	module ApplicationHelper
 BeFeet	/home/vladimir/rails/be_feet/config/application.rb	module BeFeet
@@ -32,7 +32,7 @@ edit	/home/vladimir/rails/be_feet/app/controllers/exercises_controller.rb	  def 
 edit	/home/vladimir/rails/be_feet/app/controllers/logs_controller.rb	  def edit
 edit	/home/vladimir/rails/be_feet/app/controllers/trainings_controller.rb	  def edit
 edit	/home/vladimir/rails/be_feet/app/controllers/values_controller.rb	  def edit
-flot_logs	/home/vladimir/rails/be_feet/app/helpers/trainings_helper.rb	  def flot_logs
+flot_logs	/home/vladimir/rails/be_feet/app/helpers/application_helper.rb	  def flot_logs
 index	/home/vladimir/rails/be_feet/app/controllers/exercises_controller.rb	  def index
 index	/home/vladimir/rails/be_feet/app/controllers/logs_controller.rb	  def index
 index	/home/vladimir/rails/be_feet/app/controllers/trainings_controller.rb	  def index

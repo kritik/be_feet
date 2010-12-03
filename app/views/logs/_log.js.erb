@@ -1,1 +1,1 @@
-alert("fsfsdf");
+add_log("<%= escape_javascript(render :partial => 'log.html', :object=>@log) %>",<%= (flot_logs(@log.training))  %>);
