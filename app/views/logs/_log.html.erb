@@ -1,0 +1,9 @@
+<div id="log_<%= log.id %>" class="log float_left">
+<%= log.time.strftime("%d-%m-%Y %H:%M") %>
+<hr />
+<p>
+  <b>Value:</b>
+  <%= log.value %>
+</p>
+<%= link_to "Delete", log, :method=>:delete, :remote=>true, :confirm=> "Are you sure?" %>
+</div>

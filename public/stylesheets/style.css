@@ -5,3 +5,8 @@
   clear:both;
 }
 
+.log{
+  border: 1px solid black;
+  margin-left: 5px;
+  padding: 4px;
+}
