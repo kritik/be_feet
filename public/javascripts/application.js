@@ -17,16 +17,27 @@ function make_plot(coordinates){
   $.plot($("#placeholder"), [ coordinates ],{
     xaxis: {
       mode: "time",
-      timeformat: "%y-%m-%d %H:%M"
+      timeformat: "%d-%m-%y"// %H:%M"//,
+    // tickFormatter: function (val, axis) {
+    //   var d = new Date(val);
+    //   console.log(axis);
+    //   console.log(val);
+    //   console.log(d);
+    //   return d.getUTCDate() + "/" + (d.getUTCMonth() + 1);
+    // }
     }
+
   });
 }
 
 
 function add_log(log, plot_arr){
   $("#logs").append(log);
-  console.log(log);
-  console.log(plot_arr);
+  make_plot(plot_arr);
+}
+
+function del_log(log_id, plot_arr){
+  $("#log_"+log_id).hide('slow').remove();
   make_plot(plot_arr);
 }
 

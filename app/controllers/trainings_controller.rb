@@ -14,8 +14,6 @@ class TrainingsController < ApplicationController
   # GET /trainings/1.xml
   def show
     @training = Training.find(params[:id])
-    p "=============================="
-    p params
     @log ||= Log.new(:training_id => @training.id)
 
     respond_to do |format|

@@ -1,34 +1,20 @@
 <h1>Listing trainings</h1>
 
-<table>
-  <tr>
-    <th>User</th>
-    <th>Name</th>
-    <th>Info</th>
-    <th>Week days</th>
-    <th>Times per day</th>
-    <th>Result date</th>
-    <th>Result</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @trainings.each do |training| %>
-  <tr>
-    <td><%= training.user_id %></td>
-    <td><%= training.name %></td>
-    <td><%= training.info %></td>
-    <td><%= training.week_days %></td>
-    <td><%= training.times_per_day %></td>
-    <td><%= training.result_date %></td>
-    <td><%= training.result %></td>
-    <td><%= link_to 'Show', training %></td>
-    <td><%= link_to 'Edit', edit_training_path(training) %></td>
-    <td><%= link_to 'Destroy', training, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+<div id="trainings">
+  <% @trainings.each_with_index do |training, index| %>
+    <div id="training">
+      <div id="id" class="float_left"><%= index + 1 %>.</div>
+      <div id="name" class="float_left"><b><%= training.name %></b></div>
+      <div id="info" class="float_left"><%= training.info %></div>
+      <div class="clear_both" />
+      <div id="result_date" class="float_left"><%= training.result_date %></div>
+      <div id="spacer" class="float_left">&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;</div>
+      <div id="result" class="float_left"><%= training.result %></div>
+      <div id="" class="float_left">&nbsp;&nbsp;&nbsp;<%= link_to 'Show', training %> <%= link_to 'Edit', edit_training_path(training) %> </div>
+      <div class="clear_both" />
+    </div>
+  <% end %>
+</div>
 
 <br />
 

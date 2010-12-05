@@ -1,5 +1,5 @@
-<div class="float_left">
-<p id="notice"><%= notice %></p>
+<div class="float_left training_view">
+  <p id="notice"><%= notice %></p>
 
 <p>
   <b>User:</b>
@@ -60,6 +60,11 @@
   <div class="logs" id="logs">
     <%= render :partial => "logs/log", :collection=> @training.logs%>
   </div>
-  
+  <div class="clear_both" />
+  <div>
+    <% for log in @training.logs %>
+      <div><%= log.time.to_s %> - <%= log.value %></div>
+    <% end %>
+  </div>
 </div>
 
