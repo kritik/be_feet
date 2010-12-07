@@ -1,6 +1,5 @@
 <div class="float_left training_view">
   <p id="notice"><%= notice %></p>
-
 <p>
   <b>User:</b>
   <%= @training.user_id %>
@@ -27,8 +26,8 @@
 </p>
 
 <p>
-  <b>Result date:</b>
-  <%= @training.result_date %>
+  <b>Dates left:</b>
+  <h3><%= distance_of_time_in_words(@training.result_date, Time.now) %></h3>
 </p>
 
 <p>
@@ -56,14 +55,15 @@
 
 
 <div class="content">
-  <div id="placeholder" class="" style="width:600px;height:300px;" data-coordinates="<%= flot_logs(@training) %>"></div>
+  <div id="placeholder" class="" style="width:600px;height:300px;" data-coordinates="<%= flot_logs(@training) %>" data-below_line="<%= @training.result.to_f %>"></div>
   <div class="logs" id="logs">
     <%= render :partial => "logs/log", :collection=> @training.logs%>
   </div>
-  <div class="clear_both" />
-  <div>
+  <div class="clear_both"></div>
+  <div class="accordion" style="height:150px;width:250px;overflow-y:scroll;overflow-x:hidden;">
     <% for log in @training.logs %>
-      <div><%= log.time.to_s %> - <%= log.value %></div>
+    <h3><%=l log.time %> - <%= log.value %></h3>
+    <div><%= render :partial => "logs/log_body", :object=> log %></div>
     <% end %>
   </div>
 </div>
